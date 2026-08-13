@@ -1,0 +1,12 @@
+{
+  "name": "cryptonews-production-v1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,14 @@
+name = "cryptonews-cms"
+main = "worker.js"
+compatibility_date = "2026-08-01"
+
+# Set secrets with:
+# wrangler secret put CMS_SECRET
+# wrangler secret put GITHUB_APP_PRIVATE_KEY
+#
+# Non-secret vars can be configured in Cloudflare dashboard:
+# GITHUB_APP_ID
+# GITHUB_INSTALLATION_ID
+# GITHUB_OWNER
+# GITHUB_REPO
+# GITHUB_BRANCH

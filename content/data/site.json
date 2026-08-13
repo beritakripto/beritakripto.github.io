@@ -1,0 +1,13 @@
+{
+  "name": "CryptoNews",
+  "tagline": "Berita Kripto, Blockchain & Web3",
+  "description": "Portal berita kripto, blockchain, DeFi, Bitcoin dan Web3.",
+  "language": "id-ID",
+  "timezone": "Asia/Jakarta",
+  "baseUrl": "https://example.com",
+  "logoText": "CRYPTO",
+  "logoAccent": "NEWS",
+  "theme": {
+    "primary": "#2563eb"
+  }
+}
