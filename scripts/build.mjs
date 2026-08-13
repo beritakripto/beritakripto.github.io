@@ -50,6 +50,10 @@ const card=p=>`<a class="card" href="/${esc(p.slug)}/"><img src="${esc(p.image||
 const shell=(title,body,head='')=>`<!doctype html><html lang="${esc(site.language)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="index,follow,max-image-preview:large"><title>${esc(title)}</title>${head}<link rel="stylesheet" href="/assets/site.css"></head><body><header class="top"><div class="container nav"><a class="brand" href="/">${esc(site.logoText)}<span>${esc(site.logoAccent)}</span></a><nav class="links"><a href="/">Beranda</a><a href="/category/crypto/">Crypto</a><a href="/category/bitcoin/">Bitcoin</a><a href="/category/defi/">DeFi</a><a href="/search/">Cari</a></nav></div></header>${body}<footer class="footer"><div class="container">${esc(site.name)} — ${esc(site.description)}</div></footer></body></html>`;
 
 fs.cpSync('public',OUT,{recursive:true});
+// Copy CMS admin interface to GitHub Pages output
+if (fs.existsSync('admin')) {
+  fs.cpSync('admin',path.join(OUT,'admin'),{recursive:true});
+}
 posts.sort((a,b)=>new Date(b.date)-new Date(a.date));
 
 const latest=posts.slice(0,30).map(card).join('');
